@@ -1,73 +1,40 @@
-# Created for Sui + Ika SDK development on Linux Mint (2026)
-# Sources: github.com/MystenLabs/sui/.gitignore + gitignore.io (rust, node, linux, vscode)
-
-### Sui-specific (from official MystenLabs/sui repo) ###
-**/target
-.pre-commit*
-build
-!crates/sui-single-node-benchmark/tests/data/package_publish_from_bytecode/package_a/build
-!crates/sui-single-node-benchmark/tests/data/package_publish_from_bytecode/package_b/build
-
-# Sui local config and data (не коммитьте приватные ключи!)
-~/.sui/
-.sui/
-localnet/
-devnet/
-testnet_db/
-
-### Rust (Cargo) ###
-debug/
-Cargo.lock  # Игнорировать для библиотек; УБЕРИТЕ эту строку, если проект — executable (CLI)
-**/*.rs.bk
-*.pdb
-
-### Node.js / TypeScript (pnpm для Ika SDK) ###
+########################
+# Node / JS (IKA SDK)
+########################
 node_modules/
 dist/
 build/
-*.tsbuildinfo
-
-# pnpm specific
-.pnpm-store/
-.pnpm-debug.log*
-
-# Logs and caches
-logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-.pnpm-debug.log*
-.nyc_output
-coverage/
-.cache/
-.parcel-cache/
 
-# Environment variables
+########################
+# Env / Secrets
+########################
 .env
-.env.local
-.env.*.local
+.env.*
+*.key
+*.pem
+wallet*.json
 
-### Linux ###
-*~
-.fuse_hidden*
-.directory
-.Trash-*
-.nfs*
+########################
+# Sui / Move
+########################
+.move/
+.sui/
+.sui_client.yaml
+Move.lock
+*.mv
 
-### VS Code (Code) ###
-.vscode/
-!.vscode/extensions.json  # Если хотите делить рекомендованными extensions
-!.vscode/settings.json    # Если хотите делить настройками проекта
-*.code-workspace
+########################
+# Rust
+########################
+target/
+Cargo.lock
 
-### General dev artifacts ###
+########################
+# OS / IDE
+########################
 .DS_Store
-Thumbs.db
+.idea/
+.vscode/
 *.swp
-*.swo
-*~.nib
-Session.vim
-.netrwhist
-tags
 
-# End of .gitignore
