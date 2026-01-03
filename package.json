@@ -1,0 +1,20 @@
+{
+  "name": "ika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.2",
+  "dependencies": {
+    "@ika.xyz/sdk": "^0.2.7",
+    "@mysten/sui": "^1.45.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
