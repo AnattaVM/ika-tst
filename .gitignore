@@ -38,3 +38,9 @@ Cargo.lock
 .vscode/
 *.swp
 
+
+########################
+# Local notes / secrets
+########################
+GEMINI.md
+
